@@ -8,26 +8,36 @@
   --fundo-card
 */
 
-*{
-   margin: 0; 
-   padding: 0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --fundo-principal: #f5f5f5;
   --texto: #222222;
-  --texto-inverso:#ffffff;
+  --texto-inverso: #ffffff;
   --destaque: #0077ff;
   --destaque-inverso: #66bbff;
   --fundo-card: #ffffff;
 }
 
-body{
+body.escuro {
+  --fundo-principal: #222222;
+  --texto: #e0e0e0;
+  --texto-inverso: #333333;
+  --destaque: #ff5522;
+  --destaque-inverso: #a73917;
+  --fundo-card: #444444;
+}
+
+body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
+  transition: background-color 0.5s, color 0.5s;
 }
 
 header {
@@ -62,7 +72,7 @@ nav#menu a:hover {
   color: var(--destaque);
 }
 
-main{
+main {
   display: grid;
   grid-template-columns: auto 90vw auto;
   gap: 20px;
@@ -118,7 +128,7 @@ div#social a:hover {
 /* começo article#video */
 
 section#detalhes {
-   grid-column: 2;
+  grid-column: 2;
 }
 
 article {
@@ -138,7 +148,7 @@ article h2 {
   width: 100%;
   margin: auto;
   aspect-ratio: 16/9;
- 
+
 }
 
 .video-container video {
@@ -301,10 +311,10 @@ footer a:hover {
     max-width: 80%;
   }
 
-   #projeto-container .foto {
+  #projeto-container .foto {
     aspect-ratio: 1/1;
     max-width: 20%;
     max-height: 200px;
-   }
+  }
 
 }
